@@ -1,18 +1,18 @@
-PureScript IndexedDB [![](https://img.shields.io/badge/doc-pursuit-60b5cc.svg)](http://pursuit.purescript.org/packages/purescript-indexeddb) [![Build Status](https://travis-ci.org/truqu/purescript-indexedDB.svg?branch=master)](https://travis-ci.org/truqu/purescript-indexedDB)
-=====
+# PureScript IndexedDB [![](https://img.shields.io/badge/doc-pursuit-60b5cc.svg)](http://pursuit.purescript.org/packages/purescript-indexeddb) [![Build Status](https://travis-ci.org/truqu/purescript-indexedDB.svg?branch=master)](https://travis-ci.org/truqu/purescript-indexedDB)
 
 This package offers complete bindings and type-safety upon the [IndexedDB API](https://w3c.github.io/IndexedDB).
 
-## Overview 
+## Overview
 
 The `IDBCore` and `IDBFactory` are the two entry points required to create and connect to an
 indexed database. From there, modules are divided such that each of them covers a specific IDB
-interface. 
+interface.
 
 They are designed to be used as qualified imports such that each method gets prefixed with a
 menaingful namespace (e.g `IDBIndex.get`, `IDBObjectStore.openCursor` ...)
 
-Here's a quick example of what it look likes. 
+Here's a quick example of what it look likes.
+
 ```purescript
 module Main where
 
@@ -57,24 +57,30 @@ onUpgradeNeeded db _ _ = launchAff_ do
 ## Notes
 
 ### Errors
+
 Errors normally thrown by the IDB\* interfaces are wrapped in the `Aff` Monad as `Error` where
 the `name` corresponds to the error's name (e.g. "InvalidStateError"). Pattern matching can
 therefore be done on any error to handle specific errors thrown by the API.
 
 ### Examples
-The `test` folder contains a great amount of examples showing practical usage of the IDB\*
-interfaces. Do not hesitate to have a peek should you wonder how to use one of the module. The
-wrapper tries to keep as much as possible an API consistent with the original IndexedDB API.
-Hence, it should be quite straightforward to translate any JavaScript example to a PureScript
-one. 
+
+The `test` folder contains a great amount of examples showing practical usage of
+the IDB\* interfaces. Do not hesitate to have a peek should you wonder how to
+use one of the module. The wrapper tries to keep as much as possible an API
+consistent with the original IndexedDB API. Hence, it should be quite
+straightforward to translate any JavaScript example to a PureScript one.
 
 ## Changelog
 
-#### v3.0.0
+### Not released yet
+
+- Spago support added
+
+### v3.0.0
 
 - callback to `onUpgradeNeeded` event now provide a record with the database old version.
 
-#### v2.0.0
+### v2.0.0
 
 - review interface implementation (use of opaque classes to improve readability without compromising
   the reusability). The API doesn't really change from a user perspective though.
@@ -84,9 +90,9 @@ one.
 - Upgrade purescript-exceptions to 3.1.0 and leverage the new `name` accessor
 
 
-#### v1.0.0
+### v1.0.0
 
-- [Indexed Database API 2.0](https://w3c.github.io/IndexedDB/) totally covered apart from 
+- [Indexed Database API 2.0](https://w3c.github.io/IndexedDB/) totally covered apart from
   - `index.getAll` method (and the associated one for the IDBObjectStore)
   - binary keys
 
@@ -94,7 +100,8 @@ one.
 
 Module documentation is [published on Pursuit](http://pursuit.purescript.org/packages/purescript-indexeddb).
 
-## Testing 
+## Testing
+
 Tested in the cloud on multiple browsers and operating systems thanks to [BrowserStack](https://www.browserstack.com)
 
 
