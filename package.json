@@ -4,7 +4,8 @@
   "description": "A wrapper around the IndexedDB API",
   "scripts": {
     "prepare:release": "mkdir -p releases/github && cp -r README.md LICENSE src bower.json releases/github",
-    "test:build": "mkdir -p dist/karma && spago bundle-app --source-maps --main 'Test.Main' --to dist/karma/index.js",
+    "test:build": "mkdir -p dist/karma && spago bundle-app --main 'Test.Main' --to dist/karma/index.js",
+    "test:buildmaps": "mkdir -p dist/karma && spago bundle-app --source-maps --main 'Test.Main' --to dist/karma/index.js",
     "test:run": "karma start karma.conf.js",
     "test:rundebug": "karma start karma.conf.js --single-run=false",
     "test:run:browserstack": "karma start karma.browserstack.conf.js",
