@@ -113,9 +113,9 @@ Tested in the cloud on multiple browsers and operating systems thanks to [Browse
 
 | IE / Edge | Chrome | Firefox | Safari  | Opera | Android | iOS Safari |
 | ----------| ------ | ------- | ------- | ----- | ------- | ---------- |
-| -         | >= 57  | >= 51   | *       | >= 46 | >=10    | *          |
+| -         | >= 57  | >= 51   | [^saf]  | >= 46 | >=10    | [^saf]     |
 
-* Safari (OSX, iOS) tests fail on openCursor() / openKeyCursor()
+[^saf]: Safari (OSX, iOS) 2/52 tests fail (Oct 2021) ("openCursor()" & "openKeyCursor()")
 
 <p align="center">
   <a href="https://www.browserstack.com"><img alt="browserstack" src=".github/browserstack.png" /></a>
