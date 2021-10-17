@@ -3,6 +3,13 @@ module.exports = config => {
         autoWatch: true,
         singleRun: true,
         browsers: ["Chrome", "Firefox"],
+        // browsers: ["ChromeDebugging"],
+        customLaunchers: {
+            ChromeDebugging: {
+              base: 'Chrome',
+              flags: [ '--remote-debugging-port=9333' ]
+            }
+          },
         files: [
             "dist/karma/index.js",
         ],
