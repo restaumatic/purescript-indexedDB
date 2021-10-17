@@ -70,11 +70,17 @@ use one of the module. The wrapper tries to keep as much as possible an API
 consistent with the original IndexedDB API. Hence, it should be quite
 straightforward to translate any JavaScript example to a PureScript one.
 
+### TODO
+
+Compare differences between [Indexed Database API 2.0](https://www.w3.org/TR/IndexedDB-2/) (W3C Recommendation, 30 January 2018) and [Indexed Database API 3.0](https://w3c.github.io/IndexedDB/) (Editor’s Draft, 6 October 2021).
+
 ## Changelog
 
 ### Not released yet
 
 - Spago support added
+- bower removed
+- upgraded to purescript v0.14.4
 
 ### v3.0.0
 
@@ -107,7 +113,9 @@ Tested in the cloud on multiple browsers and operating systems thanks to [Browse
 
 | IE / Edge | Chrome | Firefox | Safari  | Opera | Android | iOS Safari |
 | ----------| ------ | ------- | ------- | ----- | ------- | ---------- |
-| -         | >= 57  | >= 51   | -       | >= 46 | -       | -          |
+| -         | >= 57  | >= 51   | *       | >= 46 | >=10    | *          |
+
+* Safari (OSX, iOS) tests fail on openCursor() / openKeyCursor()
 
 <p align="center">
   <a href="https://www.browserstack.com"><img alt="browserstack" src=".github/browserstack.png" /></a>
