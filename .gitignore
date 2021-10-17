@@ -1,3 +1,5 @@
+#
+.vscode
 ### Bower ###
 bower_components
 .bower-cache
