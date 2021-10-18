@@ -28,6 +28,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
 
+    # https://github.com/marketplace/actions/browserstack-actions
+    # https://automate.browserstack.com/dashboard/v2/quick-start/ci-cd-pipeline#configure-ci--cd-pipeline
     - name: BrowserStack Action
       uses: 'browserstack/github-actions@master'
       with:
@@ -45,3 +47,7 @@ jobs:
     - run: npm ci
     - run: npm run test:browserstack --if-present
 
+    - name: 'BrowserStackLocal Stop'
+      uses: 'browserstack/github-actions/setup-local@master'
+      with:
+        local-testing: stop
