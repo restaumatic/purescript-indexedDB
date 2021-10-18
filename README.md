@@ -1,4 +1,4 @@
-# PureScript IndexedDB [![](https://img.shields.io/badge/doc-pursuit-60b5cc.svg)](http://pursuit.purescript.org/packages/purescript-indexeddb) [![Build Status](https://travis-ci.org/truqu/purescript-indexedDB.svg?branch=master)](https://travis-ci.org/truqu/purescript-indexedDB)
+# PureScript IndexedDB [![](https://img.shields.io/badge/doc-pursuit-60b5cc.svg)](http://pursuit.purescript.org/packages/purescript-indexeddb) [![Test BrowserStack CI](https://github.com/intronic/purescript-indexeddb/workflows/node-karma-browserstack.js.yml/badge.svg)]
 
 This package offers complete bindings and type-safety upon the [IndexedDB API](https://w3c.github.io/IndexedDB).
 
