@@ -11,6 +11,8 @@ When creating a new Spago project, you can use
 to generate this file without the comments in this block.
 -}
 { name = "indexeddb"
+, license = "MIT"
+, repository = "https://github.com/intronic/purescript-indexeddb.git"
 , dependencies =
   [ "aff"
   , "arrays"
