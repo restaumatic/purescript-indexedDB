@@ -1,6 +1,6 @@
 {
   "name": "purescript-indexeddb",
-  "version": "3.1.0-dev",
+  "version": "4.0.0-dev",
   "description": "A wrapper around the IndexedDB API",
   "scripts": {
     "prepare:release": "mkdir -p releases/github && cp -r README.md LICENSE src bower.json releases/github",
