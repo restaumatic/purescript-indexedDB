@@ -33,7 +33,6 @@ to generate this file without the comments in this block.
   , "now"
   , "nullable"
   , "prelude"
-  , "psci-support"
   , "read"
   , "spec"
   , "spec-mocha"

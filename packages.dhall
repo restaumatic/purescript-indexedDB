@@ -99,6 +99,22 @@ in  upstream
 -------------------------------
 -}
 let upstream =
-      https://github.com/purescript/package-sets/releases/download/psc-0.14.4-20211005/packages.dhall sha256:2ec351f17be14b3f6421fbba36f4f01d1681e5c7f46e0c981465c4cf222de5be
+      https://github.com/purescript/package-sets/releases/download/psc-0.15.0-20220523/packages.dhall sha256:985f90fa68fd8b43b14c777d6ec2c161c4dd9009563b6f51685a54e4a26bf8ff
 
 in  upstream
+  with spec-mocha =
+    { dependencies =
+      [ "aff"
+      , "console"
+      , "datetime"
+      , "effect"
+      , "either"
+      , "foldable-traversable"
+      , "maybe"
+      , "newtype"
+      , "prelude"
+      , "spec"
+      ]
+    , repo = "https://github.com/restaumatic/purescript-spec-mocha.git"
+    , version = "v4.0.0-restaumatic2"
+    }

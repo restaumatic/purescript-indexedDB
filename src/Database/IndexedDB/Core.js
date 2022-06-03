@@ -3,52 +3,52 @@ const toArray = function toArray(xs) {
 };
 
 
-exports._showCursor = function _showCursor(cursor) {
+export function _showCursor(cursor) {
     return '(IDBCursor ' +
         '{ direction: ' + cursor.direction +
         ', key: ' + cursor.key +
         ', primaryKey: ' + cursor.primaryKey +
         ' })';
-};
+}
 
-exports._showDatabase = function _showDatabase(db) {
+export function _showDatabase(db) {
     return '(IDBDatabase ' +
         '{ name: ' + db.name +
         ', objectStoreNames: [' + toArray(db.objectStoreNames).join(', ') + ']' +
         ', version: ' + db.version +
         ' })';
-};
+}
 
-exports._showIndex = function _showIndex(index) {
+export function _showIndex(index) {
     return '(IDBIndex ' +
         '{ name: ' + index.name +
         ', keyPath: ' + index.keyPath +
         ', multiEntry: ' + index.multiEntry +
         ', unique: ' + index.unique +
         ' })';
-};
+}
 
-exports._showKeyRange = function _showKeyRange(range) {
+export function _showKeyRange(range) {
     return '(IDBKeyRange ' +
         '{ lower: ' + range.lower +
         ', upper: ' + range.upper +
         ', lowerOpen: ' + range.lowerOpen +
         ', upperOpen: ' + range.upperOpen +
         ' })';
-};
+}
 
-exports._showObjectStore = function _showObjectStore(store) {
+export function _showObjectStore(store) {
     return '(IDBObjectStore ' +
         '{ autoIncrement: ' + store.autoIncrement +
         ', indexNames: [' + toArray(store.indexNames).join(', ') + ']' +
         ', keyPath: ' + store.keyPath +
         ', name: ' + store.name +
         ' })';
-};
+}
 
-exports._showTransaction = function _showTransaction(tx) {
+export function _showTransaction(tx) {
     return '(IDBTransaction ' +
         '{ error: ' + tx.error +
         ', mode: ' + tx.mode +
         ' })';
-};
+}

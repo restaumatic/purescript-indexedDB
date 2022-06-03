@@ -1,8 +1,8 @@
-exports._dateTimeToForeign = function _dateTimeToForeign(y, m, d, h, mi, s, ms) {
+export function _dateTimeToForeign(y, m, d, h, mi, s, ms) {
     return new Date(y, m, d, h, mi, s, ms);
-};
+}
 
-exports._readDateTime = function _readDateTime(parse, right, left, date) {
+export function _readDateTime(parse, right, left, date) {
     if (Object.getPrototypeOf(date) !== Date.prototype) {
         return left(typeof date);
     }
@@ -22,9 +22,9 @@ exports._readDateTime = function _readDateTime(parse, right, left, date) {
     }
 
     return right(mdate);
-};
+}
 
-exports._unsafeReadDateTime = function _unsafeReadDateTime(parse, date) {
+export function _unsafeReadDateTime(parse, date) {
     const y = date.getFullYear();
     const m = date.getMonth() + 1;
     const d = date.getDate();
@@ -34,4 +34,4 @@ exports._unsafeReadDateTime = function _unsafeReadDateTime(parse, date) {
     const ms = date.getMilliseconds();
 
     return parse(y)(m)(d)(h)(mi)(s)(ms);
-};
+}

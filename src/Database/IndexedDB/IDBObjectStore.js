@@ -15,7 +15,7 @@ const toArray = function toArray(xs) {
 };
 
 
-exports._add = function _add(store, value, key) {
+export function _add(store, value, key) {
     return function aff(error, success) {
         try {
             const request = store.add(value, key || undefined);
@@ -29,13 +29,13 @@ exports._add = function _add(store, value, key) {
             cancelerError(new Error("Can't cancel IDB Effects"));
         };
     };
-};
+}
 
-exports._autoIncrement = function _autoIncrement(store) {
+export function _autoIncrement(store) {
     return store.autoIncrement;
-};
+}
 
-exports._clear = function _clear(store) {
+export function _clear(store) {
     return function aff(error, success) {
         try {
             const request = store.clear();
@@ -49,9 +49,9 @@ exports._clear = function _clear(store) {
             cancelerError(new Error("Can't cancel IDB Effects"));
         };
     };
-};
+}
 
-exports._createIndex = function _createIndex(store, name, path, params) {
+export function _createIndex(store, name, path, params) {
     return function aff(error, success) {
         var keyPath;
 
@@ -79,9 +79,9 @@ exports._createIndex = function _createIndex(store, name, path, params) {
             cancelerError(new Error("Can't cancel IDB Effects"));
         };
     };
-};
+}
 
-exports._deleteIndex = function _deleteIndex(store, name) {
+export function _deleteIndex(store, name) {
     return function aff(error, success) {
         try {
             store.deleteIndex(name);
@@ -94,9 +94,9 @@ exports._deleteIndex = function _deleteIndex(store, name) {
             cancelerError(new Error("Can't cancel IDB Effects"));
         };
     };
-};
+}
 
-exports._delete = function _delete(store, query) {
+export function _delete(store, query) {
     return function aff(error, success) {
         try {
             const request = store.delete(query);
@@ -110,9 +110,9 @@ exports._delete = function _delete(store, query) {
             cancelerError(new Error("Can't cancel IDB Effects"));
         };
     };
-};
+}
 
-exports._index = function _index(store, name) {
+export function _index(store, name) {
     return function aff(error, success) {
         try {
             const index = store.index(name);
@@ -125,13 +125,13 @@ exports._index = function _index(store, name) {
             cancelerError(new Error("Can't cancel IDB Effects"));
         };
     };
-};
+}
 
-exports._indexNames = function _indexNames(store) {
+export function _indexNames(store) {
     return toArray(store.indexNames);
-};
+}
 
-exports._keyPath = function _keyPath(store) {
+export function _keyPath(store) {
     const path = store.keyPath;
 
     if (Array.isArray(path)) {
@@ -143,13 +143,13 @@ exports._keyPath = function _keyPath(store) {
     }
 
     return [];
-};
+}
 
-exports._name = function _name(store) {
+export function _name(store) {
     return store.name;
-};
+}
 
-exports._put = function _put(store, value, key) {
+export function _put(store, value, key) {
     return function aff(error, success) {
         try {
             const request = store.put(value, key || undefined);
@@ -163,8 +163,8 @@ exports._put = function _put(store, value, key) {
             cancelerError(new Error("Can't cancel IDB Effects"));
         };
     };
-};
+}
 
-exports._transaction = function _transaction(store) {
+export function _transaction(store) {
     return store.transaction;
-};
+}
